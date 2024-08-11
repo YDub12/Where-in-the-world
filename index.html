@@ -4,10 +4,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/css/style.css">
-    <title>Document</title>
+    <title>Where in the World?</title>
 </head>
 <body>
-    
+    <!--question and answers to populate here-->
+    <div class="quiz-container">
+        <h1>Where in the World?</h1>
+        <!--Region selection area-->
+        <div id="region" class="region-select">
+            <h2>Select your Continent</h2>
+            <button onclick="">Europe</button>
+            <button onclick="">Asia</button>
+            <button onclick="">Africa</button>
+        </div>
+        <!--Questions will populate here-->
+        <div id="quiz-area">
+            <div class="question">
+                <p id="question-text"></p>
+                
+            </div>
+            <button id="next-button">Next question</button>
+        </div>
+        <div id="result">
+            <h2>Your score</h2>
+            <button>Reset quiz</button>
+        </div>
+    </div>
 
     <script src="assets/js/script.js"></script>
 </body>
