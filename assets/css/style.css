@@ -13,6 +13,9 @@ body {
 h1 {
     text-align: center;
 }
+#quiz-area, #result {
+    display: none;
+}
 .question {
     margin: 20px 0;
 }
