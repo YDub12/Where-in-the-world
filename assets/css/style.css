@@ -34,7 +34,7 @@ button {
     cursor: pointer;
 }
 button:hover {
-    background-color: #218838;
+    background-color: #238a39;
 }
 .region-select {
     text-align: center;
@@ -44,8 +44,8 @@ button:hover {
     display: flexbox;
     width: 150px;
     margin: 10px;
-    background-color: #007bff;
+    background-color: #097ffd;
 }
 .region-select button:hover {
-    background-color: #0056b3;
+    background-color: #02458d;
 }

@@ -18,12 +18,17 @@ let score = 0;
 
 // function to start quiz 
 function startQuiz(region) {
-
+    selectedRegion = region;
+    currentQuestionIndex = 0;
+    score = 0;
+    document.getElementById('region').style.display = 'none';
+    document.getElementById('quiz-area').style.display = 'block';
+    loadQuestion();
 }
 
 //function to load question 
 function loadQuestion() {
-
+    
 }
 
 // function to randomise the question order
