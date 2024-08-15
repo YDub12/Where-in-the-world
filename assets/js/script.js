@@ -145,19 +145,17 @@ function incrementScore(selectedOption) {
 }
 // load next question 
 function nextQuestion() {
-    let selectedOption = document.querySelector('input[name="option"]:checked');
-    if (selectedOption) {
-        if (selectedOption.value === quizData[selectedRegion][currentQuestionIndex].capital) {
-            score++;
-        }
-        currentQuestionIndex++;
-        if (currentQuestionIndex < quizData[selectedRegion].length) {
-            loadQuestion();
-        } else {
-            showResult();
-        }
+
+    document.getElementById('feedback').textContent = '';
+    currentQuestionIndex++;
+
+    if (currentQuestionIndex < questions.length) {
+        // to call the function again and ensure that the data variables are blank
+        showQuestion();
+        userAnswer = '';
+        correctAnswer = '';
     } else {
-        alert("Please select an answer!");
+        showResult();
     }
 }
 
