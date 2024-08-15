@@ -122,30 +122,20 @@ function startQuiz(region) {
 }
 
 //function to load question 
-function loadQuestion() {
+function showQuestion() {
     let questionElement = document.getElementById('question-text');
-    let optionsList = document.getElementById('options-list');
+    let currentQuestion = questions[currentQuestionIndex];
+
+    console.log("Current Question:", currentQuestion);
     
-    questionElement.textContent = `What is the capital of ${quizData[selectedRegion][currentQuestionIndex].country}?`;
-    optionsList.innerHTML = '';
-    
-    let options = shuffleArray([quizData[selectedRegion][currentQuestionIndex].capital, ...getRandomCapitals()]);
-    
-    options.forEach(option => {
-        let li = document.createElement('li');
-        let input = document.createElement('input');
-        input.type = 'radio';
-        input.name = 'option';
-        input.value = option;
-        
-        let label = document.createElement('label');
-        label.textContent = option;
-        
-        li.appendChild(input);
-        li.appendChild(label);
-        optionsList.appendChild(li);
-    });
-}   
+    if (currentQuestion) {
+        questionText.textContent = `What is the capital of ${currentQuestion.country}?`;
+        document.getElementById('answer-input').value = '';
+        document.getElementById('answer-input').focus();
+        document.getElementById('submit-button').style.display = 'block';
+        document.getElementById('next-button').style.display = 'none';
+    }
+}
 
 // function to randomise the question order and ignore the correct answer
 function getRandomCapitals() {
