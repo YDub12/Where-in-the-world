@@ -181,7 +181,7 @@ function nextQuestion() {
 function showResult() {
     document.getElementById('quiz').style.display = 'none';
     document.getElementById('result').style.display = 'block';
-    document.getElementById('score').textContent = `${score} / ${quizData[selectedRegion].length}`;
+    document.getElementById('score').textContent = `${score} / ${questions.length}`;
 }
 
 // to restart the quiz
