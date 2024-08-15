@@ -10,8 +10,10 @@ This was modified for two reasons:
 1. I was struggling to consistently get the correct answer being pulled through to increment the score
 2. I thought it was also a little too easy with the options presented.
 
-So I altered the overall feel of it changing it to text boxes to increase the difficulty and to allow an easier 
+So I altered the overall feel of it changing it to text boxes to increase the difficulty and to allow an easier score calculation
+
 ## Features
+
 
 ## Testing 
 

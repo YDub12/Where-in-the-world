@@ -17,6 +17,11 @@ document.addEventListener('DOMContentLoaded', function() {
         console.log(`Username "${username}" stored successfully`);
         logStoredData();
     }
+    function isUsernameTaken(username) {
+        let usedUsernames = JSON.parse(localStorage.getItem('usedUsernames')) || [];
+        console.log(`Checking if username "${username}" is already taken`); // Log the check for existing username
+        return usedUsernames.includes(username);
+    }
 
     // To handle form submission
     form.addEventListener('submit', function(event) {
