@@ -1,21 +1,11 @@
 // Initial data to be built for the quiz to take 
 let quizData = {
     europe: [
-        { country: "France", capital: "Paris"},
+        { country: "France", capital: "Paris" },
         { country: "Germany", capital: "Berlin" },
         { country: "Spain", capital: "Madrid" },
         { country: "Italy", capital: "Rome" },
-        { country: "United Kingdom", capital: "London" },
-        { country: "Netherlands", capital: "Amsterdam" },
-        { country: "Belgium", capital: "Brussels" },
-        { country: "Sweden", capital: "Stockholm" },
-        { country: "Norway", capital: "Oslo" },
-        { country: "Finland", capital: "Helsinki" },
-        { country: "Denmark", capital: "Copenhagen" },
-        { country: "Austria", capital: "Vienna" },
-        { country: "Switzerland", capital: "Bern" },
-        { country: "Poland", capital: "Warsaw" },
-        { country: "Greece", capital: "Athens" }
+        { country: "United Kingdom", capital: "London" }
     ],
     africa: [
         {country: "Nigeria", capital: "Abuja"},
@@ -116,6 +106,12 @@ function shuffleArray(array) {
     return array;
 }
 
+//increment the score
+function incrementScore(selectedOption) {
+    if (selectedOption.value === quizData[selectedRegion][currentQuestionIndex].capital) {
+        score++;
+    }
+}
 // load next question 
 function nextQuestion() {
     let selectedOption = document.querySelector('input[name="option"]:checked');
@@ -127,7 +123,7 @@ function nextQuestion() {
         if (currentQuestionIndex < quizData[selectedRegion].length) {
             loadQuestion();
         } else {
-            showResults();
+            showResult();
         }
     } else {
         alert("Please select an answer!");
@@ -135,7 +131,7 @@ function nextQuestion() {
 }
 
 // to show results 
-function showResults() {
+function showResult() {
     document.getElementById('quiz').style.display = 'none';
     document.getElementById('result').style.display = 'block';
     document.getElementById('score').textContent = `${score} / ${quizData[selectedRegion].length}`;

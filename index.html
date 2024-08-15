@@ -3,37 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assets/css/style.css">
     <title>Where in the World?</title>
-</head>
+    <link rel="stylesheet" href="assets/css/style.css">
 <body>
-    <!--question and answers to populate here-->
     <div class="quiz-container">
-        <h1>Where in the World?</h1>
-        <!--Region selection area-->
-        <div id="region" class="region-select">
-            <h2>Select your Continent</h2>
+        <h1>Geography Quiz</h1>
+
+        <section id="region-selection" class="region-selection">
+            <h2>Select a Region</h2>
             <button onclick="startQuiz('europe')">Europe</button>
-            <button onclick="startQuiz('asia')">Asia</button>
             <button onclick="startQuiz('africa')">Africa</button>
-        </div>
-        <!--Questions will populate here-->
-        <div id="quiz-area">
+            <button onclick="startQuiz('asia')">Asia</button>
+        </section>
+        <section id="quiz" style="display:none;">
             <div class="question">
                 <p id="question-text"></p>
                 <ul class="options" id="options-list">
-                    <!--Create a list of options for the question-->
+                    <!-- Options will be populated here -->
                 </ul>
-                
             </div>
-            <button id="next-button" onclick="nextQuestion()">Next question</button>
-        </div>
-        <div id="result">
-            <h2>Your score:<span id="score"></span></h2>
-            <button onclick="restartQuiz()">Reset quiz</button>
-        </div>
+            <button id="next-button" onclick="nextQuestion()">Next</button>
+        </section>
+        <section id="result" style="display:none;">
+            <h2>Your Score: <span id="score"></span></h2>
+            <button onclick="restartQuiz()">Restart Quiz</button>
+        </section>
     </div>
-
     <script src="assets/js/script.js"></script>
 </body>
 </html>
