@@ -15,6 +15,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
         localStorage.setItem('username', username);
         console.log(`Username "${username}" stored successfully`);
+        logStoredData();
     }
 
     // To handle form submission
@@ -23,13 +24,24 @@ document.addEventListener('DOMContentLoaded', function() {
 
         const username = usernameInput.value.trim();
 
-        if (username) {
+        if (username && !isUsernameTaken(username)) {
             storeUsername(username);
             welcomeMessage.textContent = `Welcome, ${username}!`;
             usernameInput.value = ''; // Clear the input field
             document.getElementById('username-form').style.display = 'none';
+        } else if (isUsernameTaken(username)) {
+            welcomeMessage.textContent = 'Username is already taken. Please choose a different one.';
         } else {
             welcomeMessage.textContent = 'Please enter a valid username.';
+        }
+        function logStoredData() {
+            // Retrieve and log the list of used usernames
+            let usedUsernames = JSON.parse(localStorage.getItem('usedUsernames')) || [];
+            console.log("Stored Usernames:", usedUsernames); // Log the list of stored usernames
+            
+            // Retrieve and log the current username
+            let currentUsername = localStorage.getItem('username');
+            console.log("Current Username:", currentUsername); // Log the current username
         }
     });
 
