@@ -167,7 +167,7 @@ function nextQuestion() {
     document.getElementById('feedback').textContent = '';
     currentQuestionIndex++;
 
-    if (currentQuestionIndex < questions.length) {
+    if (currentQuestionIndex < questions.length && currentQuestionIndex < 5) {
         // to call the function again and ensure that the data variables are blank
         showQuestion();
         userAnswer = '';
@@ -181,7 +181,7 @@ function nextQuestion() {
 function showResult() {
     document.getElementById('quiz').style.display = 'none';
     document.getElementById('result').style.display = 'block';
-    document.getElementById('score').textContent = `${score} / ${questions.length}`;
+    document.getElementById('score').textContent = `${score} / 5`;
 }
 
 // to restart the quiz
