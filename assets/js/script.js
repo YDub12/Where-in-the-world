@@ -123,7 +123,7 @@ function startQuiz(region) {
 
 //function to load question 
 function showQuestion() {
-    let questionElement = document.getElementById('question-text');
+    let questionText = document.getElementById('question-text');
     let currentQuestion = questions[currentQuestionIndex];
 
     console.log("Current Question:", currentQuestion);
@@ -135,28 +135,6 @@ function showQuestion() {
         document.getElementById('submit-button').style.display = 'block';
         document.getElementById('next-button').style.display = 'none';
     }
-}
-
-// function to randomise the question order and ignore the correct answer
-function getRandomCapitals() {
-    let capitals = quizData[selectedRegion].map(item => item.capital);
-    let randomCapitals = [];
-    while (randomCapitals.length < 3) {
-        let randomCapital = capitals[Math.floor(Math.random() * capitals.length)];
-        if (!randomCapitals.includes(randomCapital) && randomCapital !== quizData[selectedRegion][currentQuestionIndex].capital) {
-            randomCapitals.push(randomCapital);
-        }
-    }
-    return randomCapitals;
-}
-
-// function to select from the array in a random order
-function shuffleArray(array) {
-    for (let i = array.length - 1; i > 0; i--) {
-        let j = Math.floor(Math.random() * (i + 1));
-        [array[i], array[j]] = [array[j], array[i]];
-    }
-    return array;
 }
 
 //increment the score
