@@ -1,3 +1,49 @@
+//Event listeners and handling the form submission
+document.addEventListener('DOMContentLoaded', function() {
+    const form = document.getElementById('username-form');
+    const usernameInput = document.getElementById('username-input');
+    const welcomeMessage = document.getElementById('welcome-message');
+
+    // Function to store the username (e.g., in a variable or localStorage)
+    function storeUsername(username) {
+        // Example: Store the username in localStorage
+        localStorage.setItem('username', username);
+    }
+
+    // Function to handle form submission
+    form.addEventListener('submit', function(event) {
+        event.preventDefault(); // Prevent the form from submitting the traditional way
+
+        const username = usernameInput.value.trim();
+
+        if (username) {
+            storeUsername(username);
+            welcomeMessage.textContent = `Welcome, ${username}!`;
+            usernameInput.value = ''; // Clear the input field
+            document.getElementById('username-form').style.display = 'none';
+        } else {
+            welcomeMessage.textContent = 'Please enter a valid username.';
+        }
+    });
+
+    // to monitor for enter key being pressed
+    document.addEventListener('keydown', function(event) {
+        if (event.key === 'Enter') {
+            if (document.getElementById('submit-button').style.display === 'block') {
+                checkAnswer();  // Trigger submit answer
+            } else if (document.getElementById('next-button').style.display === 'block') {
+                nextQuestion(); // Trigger next question
+            }
+        }
+    });
+  // Optionally: Load and display the stored username on page load
+  let storedUsername = localStorage.getItem('username');
+  if (storedUsername) {
+      welcomeMessage.textContent = `Welcome back, ${storedUsername}!`;
+      form.style.display = 'none';
+  }
+});
+
 // Initial data to be built for the quiz to take 
 let quizData = {
     europe: [
@@ -48,14 +94,31 @@ let selectedRegion = '';
 let currentQuestionIndex = 0;
 let score = 0;
 
-// function to start quiz 
+// function to select from the array in a random order
+function shuffleQuestions(array) {
+    for (let i = array.length - 1; i > 0; i--) {
+        let j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
+    }
+    return array;
+}
+
+// Function to start the quiz for a selected region
 function startQuiz(region) {
-    selectedRegion = region;
+    currentRegion = region;
+    questions = shuffleQuestions(quizData[region]);
+    console.log("Shuffled Questions", questions); // to debug and ensure the array has shuffled correctly 
     currentQuestionIndex = 0;
     score = 0;
-    document.getElementById('region').style.display = 'none';
-    document.getElementById('quiz-area').style.display = 'block';
-    loadQuestion();
+
+    //to display the Quiz area
+    document.getElementById('region-selection').style.display = 'none';
+    document.getElementById('quiz').style.display = 'block';
+    document.getElementById('result').style.display = 'none';
+    document.getElementById('next-button').style.display = 'none';
+
+    //call the next function in the list
+    showQuestion();
 }
 
 //function to load question 
