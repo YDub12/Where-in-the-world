@@ -169,9 +169,9 @@ function checkAnswer () {
     let feedback = document.getElementById('feedback');
 
     if (userInput === correctAnswer) {
-        feedback.textContent = 'Congrats you did it!'
+        feedback.textContent = 'Congrats you did it!';
         feedback.style.color = 'green';
-        score++
+        score++;
         document.getElementById('next-button').style.display = 'block';
         document.getElementById('submit-button').style.display = 'none';
     } else {
