@@ -189,7 +189,7 @@ function restartQuiz() {
     score = 0;
     selectedRegion = '';
     currentQuestionIndex = 0;
-    document.getElementById('quiz-area').style.display = 'none';
+    document.getElementById('quiz').style.display = 'none';
     document.getElementById('result').style.display = 'none';
-    document.getElementById('region').style.display = 'block';
+    document.getElementById('region-selection').style.display = 'block';
 }
