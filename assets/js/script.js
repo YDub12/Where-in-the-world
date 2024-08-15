@@ -7,12 +7,19 @@ document.addEventListener('DOMContentLoaded', function() {
     // Function to store the username (e.g., in a variable or localStorage)
     function storeUsername(username) {
         // Example: Store the username in localStorage
+        let usedUsernames = JSON.parse(localStorage.getItem('usedUsernames')) || [];
+        console.log("Stored Usernames",usedUsernames);
+        usedUsernames.push(username);
+        console.log(`Adding username "${username}" to the list`);
+        localStorage.setItem('usedUsernames', JSON.stringify(usedUsernames));
+
         localStorage.setItem('username', username);
+        console.log(`Username "${username}" stored successfully`);
     }
 
-    // Function to handle form submission
+    // To handle form submission
     form.addEventListener('submit', function(event) {
-        event.preventDefault(); // Prevent the form from submitting the traditional way
+        event.preventDefault(); // Prevent the form from submitting the default way
 
         const username = usernameInput.value.trim();
 
