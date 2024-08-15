@@ -15,7 +15,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
         localStorage.setItem('username', username);
         console.log(`Username "${username}" stored successfully`);
-        logStoredData();
     }
     function isUsernameTaken(username) {
         let usedUsernames = JSON.parse(localStorage.getItem('usedUsernames')) || [];
