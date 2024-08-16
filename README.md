@@ -88,9 +88,9 @@ The JavaScript was passed through JSHint
 
 [JSHint](https://raw.githubusercontent.com/YDub12/Where-in-the-world/main/assets/images/JSHint%20review.PNG)
 
-The HTML was passed through the official checker 
+The HTML was passed through the official checker [W3C](https://validator.w3.org/)
 
-The CSS was passed through the official checker
+The CSS was passed through the official checker [CSS](https://jigsaw.w3.org/css-validator/)
 
 ## Deployment
 GitHub Pages used to deploy the live version of the website. 

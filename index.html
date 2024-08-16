@@ -16,8 +16,8 @@
         <!--Position for the username to be inputted-->
         <section id="user-form">
             <form action="POST" id="username-form">
-                <label for="username">Enter your username</label>
-                <input type="text" name="username" id="username-input" placeholder="username" required>
+                <label for="username-input">Enter your username</label>
+                <input type="text" name="username-input" id="username-input" placeholder="username" required>
                 <button type="submit" id="username-submit">Submit</button>
             </form>
             <p id="welcome-message"></p>
@@ -25,17 +25,17 @@
         <!--Selection space for which region the quiz will run-->
         <section id="region-selection" class="region-selection">
             <h2>Select a Region</h2>
-            <button onclick="startQuiz('europe')">Europe</button>
-            <button onclick="startQuiz('africa')">Africa</button>
-            <button onclick="startQuiz('asia')">Asia</button>
+            <button onclick="startQuiz('europe')" aria-label="europe select">Europe</button>
+            <button onclick="startQuiz('africa')" aria-label="africa select">Africa</button>
+            <button onclick="startQuiz('asia')" aria-label="asia select">Asia</button>
         </section>
         <!--Where the questions will load into-->
         <section id="quiz">
             <div class="question">
                 <p id="question-text"></p>
-                <input type = "text" id = "answer-input" placeholder="Enter your answer here" />
-                <button id="submit-button" onclick="checkAnswer()">Submit Answer</button>
-                <button id="next-button" onclick="nextQuestion()">Next</button>
+                <input type = "text" id = "answer-input" placeholder="Enter your answer here">
+                <button id="submit-button" onclick="checkAnswer()" aria-label="submit">Submit Answer</button>
+                <button id="next-button" onclick="nextQuestion()" aria-label="next question">Next</button>
                 <p id="feedback"></p>
             </div>
         </section>
