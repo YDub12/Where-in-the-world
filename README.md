@@ -13,7 +13,7 @@ This was modified for two reasons:
 So I altered the overall feel of it changing it to text boxes to increase the difficulty and to allow an easier score calculation
 
 ## Features
-Provide an engaging and challenging quiz for users to test their knowledge of countries and their capitals
+Provide an engaging and challenging quiz for users to test their knowledge of countries and their capitals.
 
 Mix up the order of the countries presented so that people will experience a new challenge each time they come to the site.
 
@@ -21,16 +21,30 @@ Responsive design that limits the number of clicks they have to make.
 
 The page moves the cursor to the input field automatically.
 
-Quiz landing page 
+_Quiz landing page_ 
 
-Allows users to set up a username so it feels more personalised
-There are options for selecting a region: Europe, Asia and Africa. This is to provide the users with a variety of challenges 
+![quiz]()
+
+Allows users to set up a username so it feels more personalised.
+
+There are options for selecting a region: Europe, Asia and Africa. This is to provide the users with a variety of challenges.
+
 Quiz interface 
 This features a user input field and a question, the goal is to see if the user knows the capitals and their spellings 
 Result shown at the end lets the end user know how they did 
 
+### Features left to Implement 
+Add Other continents.
+
+Create a high scores section.
+
+Add a timer to increase the feeling of jeopardy.
+
+Break up some of the functions to simplify their use. 
 
 ## Testing 
+
+This was tested in Chrome, Edge and 
 
 ## Bugs
 
