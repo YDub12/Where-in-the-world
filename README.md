@@ -26,6 +26,8 @@ Allows users to set up a username so it feels more personalised.
 ![username select](https://raw.githubusercontent.com/YDub12/Where-in-the-world/main/assets/images/username.PNG)
 
 There are options for selecting a region: Europe, Asia and Africa. This is to provide the users with a variety of challenges.
+- Image below 
+
 ![options](https://raw.githubusercontent.com/YDub12/Where-in-the-world/main/assets/images/Region%20select.PNG)
 
 Quiz interface 
@@ -34,11 +36,14 @@ This features a user input field and a question, the goal is to see if the user 
 ![question](https://raw.githubusercontent.com/YDub12/Where-in-the-world/main/assets/images/Question%20display.PNG)
 
 There are several messages after the question has been answered to let the user know how they have done. 
+
 ![correct](https://raw.githubusercontent.com/YDub12/Where-in-the-world/main/assets/images/Correct%20response.PNG)
+
 
 ![incorrect](https://raw.githubusercontent.com/YDub12/Where-in-the-world/main/assets/images/Error%20message.PNG)
 
 There is also a section to show them their scores 
+
 ![score](https://raw.githubusercontent.com/YDub12/Where-in-the-world/main/assets/images/Score%20presented.PNG)
 
 ### Features left to Implement 
