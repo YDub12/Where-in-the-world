@@ -23,8 +23,10 @@ The page moves the cursor to the input field automatically.
 ![quiz](https://raw.githubusercontent.com/YDub12/Where-in-the-world/main/assets/images/Landing%20page.PNG)
 
 Allows users to set up a username so it feels more personalised.
+![username select](https://raw.githubusercontent.com/YDub12/Where-in-the-world/main/assets/images/username.PNG)
 
 There are options for selecting a region: Europe, Asia and Africa. This is to provide the users with a variety of challenges.
+![options](https://raw.githubusercontent.com/YDub12/Where-in-the-world/main/assets/images/Region%20select.PNG)
 
 Quiz interface 
 This features a user input field and a question, the goal is to see if the user knows the capitals and their spellings.
@@ -35,6 +37,9 @@ There are several messages after the question has been answered to let the user 
 ![correct](https://raw.githubusercontent.com/YDub12/Where-in-the-world/main/assets/images/Correct%20response.PNG)
 
 ![incorrect](https://raw.githubusercontent.com/YDub12/Where-in-the-world/main/assets/images/Error%20message.PNG)
+
+There is also a section to show them their scores 
+![score](https://raw.githubusercontent.com/YDub12/Where-in-the-world/main/assets/images/Score%20presented.PNG)
 
 ### Features left to Implement 
 Add Other continents.
@@ -73,7 +78,10 @@ Additional issues found with the scores not incrementing
 
 Outstanding bugs include:
 
-- Issues around the usernames not saving across different environments
+- Issues around the usernames not saving across different environments an example of how this is supposed to function exists here
+![username](https://raw.githubusercontent.com/YDub12/Where-in-the-world/main/assets/images/Username%20Taken.PNG)
+
+However this has not always functioned. 
 
 ## Design 
 My initial plan was to generate questions with randomly generated options from the array and have radio options attached. 
