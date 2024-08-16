@@ -10,9 +10,11 @@
     <meta name="author" content="Your Name">
     <link rel="stylesheet" href="assets/css/style.css">
 <body>
+    <Header>
+        <h1>Where in the World?</h1>
+    </Header>
     <!--Main area for the quiz-->
     <div class="quiz-container">
-        <h1>Where in the World?</h1>
         <!--Position for the username to be inputted-->
         <section id="user-form">
             <form action="POST" id="username-form">
@@ -42,9 +44,12 @@
         <!--Results area-->
         <section id="result">
             <h2>Your Score: <span id="score"></span></h2>
-            <button onclick="restartQuiz()">Restart Quiz</button>
+            <button onclick="restartQuiz()" aria-label="restart">Restart Quiz</button>
         </section>
     </div>
+    <footer>
+        <p>Designed by Yuri Dubina</p>
+    </footer>
     <!--Javascript source-->
     <script src="assets/js/script.js"></script>
 </body>
