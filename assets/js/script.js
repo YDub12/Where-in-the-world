@@ -74,7 +74,17 @@ let quizData = {
         { country: "Germany", capital: "Berlin" },
         { country: "Spain", capital: "Madrid" },
         { country: "Italy", capital: "Rome" },
-        { country: "United Kingdom", capital: "London" }
+        { country: "United Kingdom", capital: "London" },
+        { country: "Netherlands", capital: "Amsterdam" },
+        { country: "Belgium", capital: "Brussels" },
+        { country: "Sweden", capital: "Stockholm" },
+        { country: "Norway", capital: "Oslo" },
+        { country: "Finland", capital: "Helsinki" },
+        { country: "Denmark", capital: "Copenhagen" },
+        { country: "Austria", capital: "Vienna" },
+        { country: "Switzerland", capital: "Bern" },
+        { country: "Poland", capital: "Warsaw" },
+        { country: "Greece", capital: "Athens" }
     ],
     africa: [
         {country: "Nigeria", capital: "Abuja"},
@@ -116,6 +126,7 @@ let quizData = {
 let selectedRegion = '';
 let currentQuestionIndex = 0;
 let score = 0;
+let questions = '';
 
 // function to select from the array in a random order
 function shuffleQuestions(array) {
