@@ -4,6 +4,8 @@
 
 ![Am I responsive](https://raw.githubusercontent.com/YDub12/Where-in-the-world/main/assets/images/Am%20I%20Responsive.PNG)
 
+Note the Am I responsive did not update to the most recent view 
+
 This project is a chance for me to build a quiz game featuring capital cities of majot countries in three continents. 
 
 

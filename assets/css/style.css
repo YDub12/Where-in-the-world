@@ -1,3 +1,4 @@
+/* basic styling for the body */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -8,7 +9,7 @@ body {
     align-items: center; 
     min-height: 100vh; 
 }
-
+/* handling the header and H1 */
 header {
     background-color: #34495e; 
     color: white; 
@@ -26,7 +27,7 @@ header h1 {
     letter-spacing: 1.5px; 
     font-weight: bold; 
 }
-
+/* for the footer */
 footer {
     text-align: center;
     padding: 10px 0;
@@ -38,6 +39,7 @@ footer {
     max-width: 600px; 
     margin: 20px auto 0; 
 }
+/* the main display */
 .quiz-container {
     max-width: 800px;
     margin: 0 auto;
@@ -45,14 +47,12 @@ footer {
     padding: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
+/* to ensure that only what's needed is seen on page load */
 #quiz {
     display: none;
 }
 #result {
     display:none;
-}
-h1 {
-    text-align: center;
 }
 .question {
     margin: 20px 0;
@@ -66,6 +66,7 @@ h1 {
     padding: 10px;
     margin: 10px 0 10px 0;
 }
+/* styling for buttons */
 #user-form button {
     width: 150px;
 }
@@ -121,6 +122,3 @@ button:hover {
     background-color: #0056b3;
 }
 
-#username-table-section {
-    display: none;
-}
